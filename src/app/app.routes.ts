@@ -7,6 +7,7 @@ export const routes: Routes = [
   {
     path: '',
     component: AppComponent,
+
   },
   {
     path: 'login',
@@ -20,5 +21,6 @@ export const routes: Routes = [
   {
     path: '**',
     redirectTo: 'login',
+
   },
 ];
