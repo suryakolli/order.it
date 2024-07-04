@@ -1,7 +1,7 @@
-<mat-card>
+<mat-card class="mainCard">
   <mat-card-content>
     <div class="header">
-      <h2>LOGIN</h2>
+      <h2>Login</h2>
     </div>
     <form (ngSubmit)="(onLogin)" name="loginForm" [formGroup]="loginForm">
       <div class="email-input">
@@ -14,7 +14,6 @@
         </mat-form-field>
       </div>
       <div>
-        <span class="aLink">Forgot Password</span>
         <mat-form-field class="full-width" appearance="outline">
           <mat-label>Password</mat-label>
           <input
@@ -23,11 +22,12 @@
             [type]="hide ? 'password' : 'text'"
             required
           />
+
           <button
             mat-icon-button
-            matsuffix
+            matSuffix
             (click)="hide = !hide"
-            [attr.aria-lable]="'Hide Password'"
+            [attr.aria-label]="'Hide Password'"
             [attr.aira-pressed]="hide"
           >
             <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
@@ -37,6 +37,7 @@
           >
         </mat-form-field>
       </div>
+      <span class="aLink">Forgot Password</span>
       <button mat-flat-button color="primary">Login</button>
     </form>
   </mat-card-content>
