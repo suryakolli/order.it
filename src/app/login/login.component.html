@@ -3,7 +3,7 @@
     <div class="header">
       <h2>Login</h2>
     </div>
-    <form (ngSubmit)="(onLogin)" name="loginForm" [formGroup]="loginForm">
+    <form (ngSubmit)="onLogin()" name="loginForm" [formGroup]="loginForm">
       <div class="email-input">
         <mat-form-field class="full-width" appearance="outline">
           <mat-label>Email</mat-label>
@@ -38,7 +38,7 @@
         </mat-form-field>
       </div>
       <span class="aLink">Forgot Password</span>
-      <button mat-flat-button color="primary">Login</button>
+      <button mat-flat-button color="primary" type="submit">Login</button>
     </form>
   </mat-card-content>
 </mat-card>

@@ -39,5 +39,6 @@ export class LoginComponent implements OnInit {
 
   onLogin() {
     // Implement your login logic here
+    console.log(this.loginForm);
   }
 }
