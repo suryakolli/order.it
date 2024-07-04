@@ -1,9 +1,8 @@
 .content-body {
-  min-height: 100%;
-  padding: 60px 1rem;
-
-
-
-
-  display: block;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center; /* Center the content horizontally if needed */
+  align-items: center; /* Center the content vertically if needed */
+  padding: 0;
+  margin: 0;
 }
