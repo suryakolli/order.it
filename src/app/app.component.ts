@@ -8,6 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { title } from './constants';
 
 @Component({
   selector: 'app-root',
@@ -25,5 +26,5 @@ import { ReactiveFormsModule } from '@angular/forms';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'Order.It';
+  title = title;
 }
