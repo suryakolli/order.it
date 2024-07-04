@@ -1,17 +1,40 @@
+.right {
+  width: 49%;
+  height: 100px;
+  border: 1px solid red;
+  float: right;
+}
+.left {
+  width: 49%;
+  height: 100%;
+  float: left;
+  border: 1px solid black;
+}
+
 mat_card {
+  background-color: #037171;
   max-width: 200px;
   margin: 2em auto;
   text-align: center;
   max-height: 600px;
 }
+.mainCard {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
 mat-card-content {
-  // max-width: 50%;
+  max-width: 100%;
+  // border: 1px solid black;
 }
 .header {
   text-align: center;
 }
 .full-width {
-  width: 80%;
+  width: 100%;
 }
 .forgot-password {
   padding-left: 0px;
