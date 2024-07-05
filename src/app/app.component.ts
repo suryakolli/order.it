@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { LoginComponent } from './login/login.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { MatIconModule } from '@angular/material/icon';
 
 import { MatCardModule } from '@angular/material/card';
@@ -21,6 +22,7 @@ import { title } from './constants';
     MatInputModule,
     ReactiveFormsModule,
     MatIconModule,
+    LoginPageComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

@@ -7,6 +7,9 @@ import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
+import { RouterModule } from '@angular/router';
+
+
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -17,6 +20,9 @@ import { CommonModule } from '@angular/common';
     ReactiveFormsModule,
     MatIconModule,
     CommonModule,
+
+    RouterModule,
+
   ],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
@@ -37,5 +43,8 @@ export class LoginComponent implements OnInit {
 
   onLogin() {
     // Implement your login logic here
+
+    console.log(this.loginForm);
+
   }
 }

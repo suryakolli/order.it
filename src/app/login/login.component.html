@@ -3,13 +3,15 @@
     <div class="header">
       <h2>Login</h2>
     </div>
-    <form (ngSubmit)="(onLogin)" name="loginForm" [formGroup]="loginForm">
+
+    <form (ngSubmit)="onLogin()" name="loginForm" [formGroup]="loginForm">
+
       <div class="email-input">
         <mat-form-field class="full-width" appearance="outline">
           <mat-label>Email</mat-label>
           <input formControlName="email" matInput required />
           <mat-error *ngif="loginForm.get('email').error?.required">
-            requried email address
+            Requried email address
           </mat-error>
         </mat-form-field>
       </div>
@@ -38,7 +40,10 @@
         </mat-form-field>
       </div>
       <span class="aLink">Forgot Password</span>
-      <button mat-flat-button color="#037171">Login</button>
+
+      <button mat-flat-button color="primary" type="submit">Login</button>
+
+
     </form>
   </mat-card-content>
 </mat-card>
