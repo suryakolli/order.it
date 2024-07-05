@@ -6,9 +6,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-
+import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 import { RouterModule } from '@angular/router';
-
 
 @Component({
   selector: 'app-login',
@@ -20,9 +20,7 @@ import { RouterModule } from '@angular/router';
     ReactiveFormsModule,
     MatIconModule,
     CommonModule,
-
     RouterModule,
-
   ],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
@@ -37,14 +35,16 @@ export class LoginComponent implements OnInit {
   });
 
   hide = true;
-  constructor() {}
+
+  constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit(): void {}
 
   onLogin() {
     // Implement your login logic here
-
-    console.log(this.loginForm);
-
+    if (this.loginForm.valid) {
+      this.authService.login();
+      this.router.navigate(['/home']);
+    }
   }
 }
