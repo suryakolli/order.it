@@ -10,6 +10,9 @@ import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { RouterModule } from '@angular/router';
 
+import { RouterModule } from '@angular/router';
+
+
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -41,10 +44,10 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
 
   onLogin() {
-    // Implement your login logic here
     if (this.loginForm.valid) {
       this.authService.login();
       this.router.navigate(['/home']);
     }
+    console.log(this.loginForm);
   }
 }

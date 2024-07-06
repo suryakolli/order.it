@@ -18,6 +18,15 @@ export const routes: Routes = [
   },
   {
     path: '',
+    component: AppComponent,
+
+  },
+  {
+    path: 'login',
+    component: LoginPageComponent,
+  },
+  {
+    path: '',
     redirectTo: 'login',
     pathMatch: 'full',
   },
