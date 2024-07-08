@@ -10,9 +10,6 @@ import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { RouterModule } from '@angular/router';
 
-import { RouterModule } from '@angular/router';
-
-
 @Component({
   selector: 'app-login',
   standalone: true,
