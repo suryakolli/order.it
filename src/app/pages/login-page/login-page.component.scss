@@ -12,22 +12,23 @@ html {
 }
 .mainPage {
   display: flex;
-  // border: 1px solid black;
-  width: 100%;
   padding: 0;
   height: 100vh;
+  border: 1px solid red;
 
   .right {
     flex: 2;
     display: flex;
     justify-content: center;
+    border: 1px solid blue;
+
     align-items: center;
     flex-direction: column;
     background-color: #ffffff;
   }
   .left {
     flex: 1;
-
+    border: 2px solid green;
     background-color: #f0f0f0;
   }
 

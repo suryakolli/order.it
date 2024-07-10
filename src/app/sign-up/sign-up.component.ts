@@ -11,7 +11,7 @@ import { AuthService } from '../auth.service';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-signup',
   standalone: true,
   imports: [
     MatButtonModule,
@@ -22,29 +22,34 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     RouterModule,
   ],
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'],
+  templateUrl: './sign-up.component.html',
+  styleUrls: ['./sign-up.component.scss'],
 })
-export class LoginComponent implements OnInit {
-  loginForm: FormGroup = new FormGroup({
+export class SignupComponent implements OnInit {
+  signupForm: FormGroup = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [
+      Validators.required,
+      Validators.minLength(6),
+    ]),
+    confirmPassword: new FormControl('', [
       Validators.required,
       Validators.minLength(6),
     ]),
   });
 
   hide = true;
+  hideConfirm = true;
 
   constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit(): void {}
 
-  onLogin() {
-    if (this.loginForm.valid) {
-      this.authService.login();
+  onSignup() {
+    if (this.signupForm.valid) {
+      this.authService.signup();
       this.router.navigate(['/home']);
     }
-    console.log(this.loginForm);
+    console.log(this.signupForm);
   }
 }
