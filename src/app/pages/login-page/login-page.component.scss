@@ -12,11 +12,8 @@ html {
 }
 .mainPage {
   display: flex;
-  // border: 1px solid black;
-  width: 100%;
   padding: 0;
   height: 100vh;
-
   .right {
     flex: 2;
     display: flex;
@@ -27,7 +24,6 @@ html {
   }
   .left {
     flex: 1;
-
     background-color: #f0f0f0;
   }
 

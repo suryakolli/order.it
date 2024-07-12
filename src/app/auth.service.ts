@@ -6,6 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class AuthService {
   private loggedIn = new BehaviorSubject<boolean>(false);
+  private loginPage = new BehaviorSubject<boolean>(true);
 
   get isLoggedIn() {
     return this.loggedIn.asObservable();
@@ -17,5 +18,16 @@ export class AuthService {
 
   logout() {
     this.loggedIn.next(false);
+  }
+  signup() {
+    this.loggedIn.next(true);
+  }
+
+  get isLoginPage() {
+    return this.loginPage.asObservable();
+  }
+
+  toggleLogin(data: boolean) {
+    this.loginPage.next(data);
   }
 }

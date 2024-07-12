@@ -1,7 +1,19 @@
-<div class="mainPage">
-  <app-login class="left"></app-login>
-  <div class="right">
-    <h1>Order.It</h1>
-    <p>This a Login page</p>
+<body>
+  <div class="mainPage">
+    <div class="left">
+      <app-login *ngIf="showLogin"></app-login>
+      <app-signup *ngIf="!showLogin"></app-signup>
+    </div>
+    <!-- <div *ngIf="showLogin">
+      <app-login></app-login>
+    </div>
+    <div *ngIf="!showLogin">
+      <app-signup></app-signup>
+    </div> -->
+
+    <div class="right">
+      <h1>Order.It</h1>
+      <p>This a Login page</p>
+    </div>
   </div>
-</div>
+</body>

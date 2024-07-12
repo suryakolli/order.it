@@ -1,15 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss',
+  styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
+  @Output() formToggle = new EventEmitter<boolean>();
+
   isLoggedIn: boolean = false;
 
   constructor(private authService: AuthService) {
@@ -20,5 +23,9 @@ export class NavbarComponent {
 
   logout() {
     this.authService.logout();
+  }
+
+  toggleForm(showLogin: boolean) {
+    this.authService.toggleLogin(showLogin);
   }
 }
